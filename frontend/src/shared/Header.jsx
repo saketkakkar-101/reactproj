@@ -5,6 +5,8 @@ const Header = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  const [opens, setOpens] = useState(false);
+  const [opened, setOpened] = useState(false);
   return (
     <header className="text-white font-sans">
       {/* Top bar */}
@@ -110,12 +112,39 @@ const Header = () => {
         </div>
       )}
     </li>
-          <li className="hover:text-blue-400 cursor-pointer flex items-center gap-1">
-            Industry <FaChevronDown size={12} />
-          </li>
+    <li className="relative list-none">
+      <div
+        onClick={() => setOpens(!opens)}
+        className="cursor-pointer flex items-center gap-1 hover:text-blue-400"
+      >
+        Industry <FaChevronDown size={12} />
+      </div>
+
+      {opens && (
+        <div className="absolute mt-2 left-0 bg-white text-black border px-4 py-3 rounded shadow w-64 text-base z-50">
+          Working in IT industry
+        </div>
+      )}
+    </li>
           <li className="hover:text-blue-400 cursor-pointer">Career</li>
           <li className="hover:text-blue-400 cursor-pointer">Blogs</li>
-          <li className="hover:text-blue-400 cursor-pointer">Contact Us</li>
+          <li className="relative list-none">
+      <div
+        onClick={() => setOpened(!opened)}
+        className="cursor-pointer hover:text-blue-400"
+      >
+        Contact Us
+      </div>
+
+      {opened && (
+        <div className="absolute mt-2 right-0 bg-white text-black border px-4 py-3 rounded shadow w-72 text-sm z-50">
+          <p>Sagar Sarai, GMD Road</p>
+          <p>Anandpur, Asharam Kutiya Wali Gali</p>
+          <p>Moradabad</p>
+          <p>📞 7599295697</p>
+        </div>
+      )}
+    </li>
         </ul>
       </nav>
     </header>
