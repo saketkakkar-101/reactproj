@@ -13,103 +13,104 @@ const Footer = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-300 text-left max-w-6xl mx-auto">
         {/* Expertise */}
         <div>
-          <h1 className="font-bold text-white mb-2 border-b-4 hover:border-cyan-400 text-3xl inline-block">
+          <h1 className="text-[22px] font-extrabold text-white mb-3 border-b-4 hover:border-cyan-400 inline-block font-sans-serif tracking-wide">
             Expertise
           </h1>
-          <ul className="space-y-1 mt-3 text-xl font-semibold text-slate-200">
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300 font-semibold">
-                Website Development
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Web Applications
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Custom Applications
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Mobile Development
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Digital Marketing
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Cloud/Hosting
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Email Solutions
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
-            <li className="relative group w-max cursor-pointer">
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                Web / Mobile Maintenance
-              </span>
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-blue-400 transition-all duration-500 group-hover:w-full"></span>
-            </li>
+          <ul className="space-y-2 mt-4 text-[18px] font-medium text-slate-100 font-sans-serif">
+            {[
+              "Website Development",
+              "Web Applications",
+              "Custom Applications",
+              "Mobile Development",
+              "Digital Marketing",
+              "Cloud/Hosting",
+              "Email Solutions",
+              "Web / Mobile Maintenance",
+            ].map((item, i) => (
+              <li key={i} className="relative group w-max cursor-pointer mt-3">
+                <span className="group-hover:text-cyan-400 transition-colors duration-300 font-semibold tracking-wide">
+                  {item}
+                </span>
+                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full"></span>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Consulting */}
         <div>
-          <h3 className="font-bold text-white mb-2 border-b-2 border-cyan-400 inline-block">
+          <h1 className="text-[22px] font-extrabold text-white mb-3 border-b-4 hover:border-cyan-400 inline-block font-sans-serif tracking-wide">
             Consulting
-          </h3>
-          <ul className="space-y-1 mt-2">
-            <li>Blockchain</li>
-            <li>Artificial Intelligence</li>
-            <li>Information of Technology (IOT)</li>
-            <li>NFT</li>
-            <li>Digital Transformation</li>
-            <li>ChatBot</li>
-            <li>Web 3.0</li>
+          </h1>
+          <ul className="space-y-2 mt-4 text-[18px] font-medium text-slate-100 font-sans-serif">
+            {[
+              "Blockchain",
+              "Artificial Intelligence",
+              "Information of Technology (IOT)",
+              "NFT",
+              "Digital Transformation",
+              "ChatBot",
+              "Web 3.0",
+              
+            ].map((item, i) => (
+              <li key={i} className="relative group w-max cursor-pointer mt-3">
+                <span className="group-hover:text-cyan-400 transition-colors duration-300 font-semibold tracking-wide">
+                  {item}
+                </span>
+                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full"></span>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Hire */}
-        <div>
-          <h3 className="font-bold text-white mb-2 border-b-2 border-cyan-400 inline-block">
+        <div className="ml-4">
+          <h1 className="text-[22px] font-extrabold text-white mb-3 border-b-4 hover:border-cyan-400 inline-block font-sans-serif tracking-wide">
             Hire
-          </h3>
-          <ul className="space-y-1 mt-2">
-            <li>Full Stack Developers</li>
-            <li>Web Developers</li>
-            <li>MERN Stack Developers</li>
-            <li>UI/UX Designers</li>
-            <li>Others</li>
+          </h1>
+          <ul className="space-y-2 mt-4 text-[18px] font-medium text-slate-100 font-sans-serif">
+            {[
+              "Full Stack Developers",
+              "web Developers",
+              "Mern Stack Developers",
+              "UI/UX Designers",
+              "Others",
+                
+            ].map((item, i) => (
+              <li key={i} className="relative group w-max cursor-pointer mt-3">
+                <span className="group-hover:text-cyan-400 transition-colors duration-300 font-semibold tracking-wide">
+                  {item}
+                </span>
+                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full"></span>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Information */}
-        <div>
-          <h3 className="font-bold text-white mb-2 border-b-2 border-cyan-400 inline-block">
+        <div className="ml-4">
+          <h1 className="text-[22px] font-extrabold text-white mb-3 border-b-4 hover:border-cyan-400 inline-block font-sans-serif tracking-wide">
             Informations
-          </h3>
-          <ul className="space-y-1 mt-2">
-            <li>Who We Are</li>
-            <li>Clients</li>
-            <li>We Work In</li>
-            <li>Contact Us</li>
+          </h1>
+          <ul className="space-y-2 mt-4 text-[18px] font-medium text-slate-100 font-sans-serif">
+            {[
+              "Who We Are",
+              "Clients",
+              "We Work In",
+              "Contact Us"
+              
+                
+            ].map((item, i) => (
+              <li key={i} className="relative group w-max cursor-pointer mt-3">
+                <span className="group-hover:text-cyan-400 transition-colors duration-300 font-semibold tracking-wide">
+                  {item}
+                </span>
+                <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-cyan-400 transition-all duration-500 group-hover:w-full"></span>
+              </li>
+            ))}
           </ul>
         </div>
+
       </div>
     </footer>
   );

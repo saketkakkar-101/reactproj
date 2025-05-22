@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaEnvelope, FaChevronDown } from "react-icons/fa";
 
 const Header = () => {
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <header className="text-white font-sans">
       {/* Top bar */}
@@ -56,15 +59,57 @@ const Header = () => {
         </div>
         <ul className="flex flex-wrap gap-6 text-white text-md text-[16px] font-semibold justify-evenly p-6 mr-10">
           <li className="hover:text-blue-400 cursor-pointer">Home</li>
-          <li className="hover:text-blue-400 cursor-pointer flex items-center gap-1">
-            About Us <FaChevronDown size={12} />
-          </li>
-          <li className="hover:text-blue-400 cursor-pointer flex items-center gap-1">
-            Services <FaChevronDown size={12} />
-          </li>
-          <li className="hover:text-blue-400 cursor-pointer flex items-center gap-1">
-            Technology <FaChevronDown size={12} />
-          </li>
+          <li className="relative list-none">
+        <div
+          onClick={() => setAboutOpen(!aboutOpen)}
+          className="cursor-pointer flex items-center gap-1 hover:text-blue-400"
+        >
+          About Us <FaChevronDown size={12} />
+        </div>
+        {aboutOpen && (
+          <div className="absolute mt-2 left-0 bg-white text-black border px-4 py-3 rounded shadow w-64 text-base">
+            My name is Saket Kakkar
+          </div>
+        )}
+      </li>
+
+      {/* Services Dropdown */}
+      <li className="relative list-none">
+        <div
+          onClick={() => setServicesOpen(!servicesOpen)}
+          className="cursor-pointer flex items-center gap-1 hover:text-blue-400"
+        >
+          Services <FaChevronDown size={12} />
+        </div>
+        {servicesOpen && (
+          <div className="absolute mt-2 left-0 bg-white text-black border px-4 py-3 rounded shadow w-64 text-base">
+            We provide our best services
+          </div>
+        )}
+      </li>
+      <li className="relative list-none">
+      <div
+        onClick={() => setOpen(!open)}
+        className="cursor-pointer flex items-center gap-1 hover:text-blue-400"
+      >
+        Technology <FaChevronDown size={12} />
+      </div>
+
+      {open && (
+        <div className="absolute mt-2 left-0 bg-white text-black border px-4 py-3 rounded shadow w-64 text-base z-50">
+          <ul className="space-y-1">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Tailwind</li>
+            <li>MongoDB</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+      )}
+    </li>
           <li className="hover:text-blue-400 cursor-pointer flex items-center gap-1">
             Industry <FaChevronDown size={12} />
           </li>
