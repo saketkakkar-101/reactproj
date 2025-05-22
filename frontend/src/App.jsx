@@ -16,7 +16,7 @@ function App() {
          <div className='mt-80'></div>
          <BusinessSection />
 
-         <div className='min-h-screen'></div>
+         <div className='mt-80'></div>
          <Footer />
          </BrowserRouter>
 

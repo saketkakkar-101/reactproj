@@ -13,7 +13,7 @@ const Header = () => {
       <div className="bg-[#0c1124] text-sm px-4 py-2 flex flex-wrap justify-between items-center mx-auto">
         <div className="flex flex-wrap items-center gap-4 p-4 ml-10 text-[16px] font-semibold justify-evenly">
           <span>
-            {" "}
+            
             <img
               src="https://flagcdn.com/in.svg"
               alt="India Flag"

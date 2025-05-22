@@ -1,7 +1,7 @@
 const BusinessSection = () => {
     return (
         <div className="relative flex items-center justify-center bg-white py-8 px-8">
-  {/* Image + Info Container */}
+  {/* image */}
   <div className="relative w-full max-w-4xl rounded-xl flex shadow-lg">
     <img
       src="https://www.xpectoitsolutions.com/assets/img/technologo/small-business.webp"
@@ -9,7 +9,7 @@ const BusinessSection = () => {
       className="w-full h-64 md:h-80 object-cover rounded-xl"
     />
 
-    {/* Blue Info Box - narrower and taller */}
+    {/* Info Box  */}
     <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 
                     bg-blue-800 text-white p-6 md:p-8 w-full max-w-sm rounded-xl shadow-lg 
                     overflow-auto max-h-[24rem] md:max-h-[28rem]">
